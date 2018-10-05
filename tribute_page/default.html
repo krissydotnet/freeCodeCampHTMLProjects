@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Walt Disney Tribute Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1170px;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            margin: 0;
+            width: 100%;
+            height: 125px;
+        
+        }
+
+        #title {
+            margin: 0;
+            padding: 0;
+            line-height: 125px;
+            text-align: center;
+            font-family: "Mouse Memoirs";
+            font-size: 60px;
+            letter-spacing: 4px;
+        }
+
+        main {
+            background-color: white;
+        }
+
+        .banner {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 'image quotes';
+            align-items: center;
+            
+        }
+
+        #img-div {
+            grid-area: image;
+            justify-self: center;
+            background-color: black;
+        }
+
+        #left {
+            grid-area: quotes;
+            
+        }
+
+        .banner img {
+            max-width: 100%;
+            display: block;
+            border: 0;
+        }
+
+        #left div {
+            margin: 10px;
+            border-radius: 15px;
+            background-color: lightgray;
+            max-width: 300px;
+            padding: 5px;
+        }
+        .banner figure {
+            margin: 0;
+        }
+
+        .banner figcaption {
+            margin: 0;
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+        .tribute-content {
+            margin-top: 25px;
+            padding: 25px 50px;
+            background-color: #e8b788;
+            border-radius: 25px;
+        }
+        .tribute-content p {
+            line-height: 1.5em;
+        }
+        footer {
+        
+            padding: 15px;
+            background-color: black;
+            color: white;
+            text-align: right;
+        }
+        .tribute-content blockquote {
+            color: #1125ff;
+            font-size: 1.2em;
+            padding: 15px;
+        }
+        li {
+            padding: 10px;
+        }
+        @media (max-width: 900px) {
+            .banner {
+                grid-template-areas: 'image' 'quotes';
+                
+            }
+            #left {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px 10px;
+            }
+            #left div {
+               max-width: 300px;
+                padding: 5px;
+            }
+            
+        }
+        @media (max-width: 600px) {
+            #title {
+            font-size: 30px;
+            letter-spacing: 2px;
+            line-height: 75px;
+        }
+        header {
+
+            height: 75px;
+        
+        }
+            #left {
+                grid-template-columns: 1fr;
+                grid-gap: 2px;
+                font-size: 12px;
+            }
+            #left div {
+                max-width: 100%;
+                padding: 1px;
+            }
+            .tribute-content {
+            margin-top: 25px;
+            padding: 5px 15px;
+            background-color: #e8b788;
+            border-radius: 25px;
+            font-size: 12px;
+        }
+            .tribute-content h2 {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 id="title">Walt Disney</h1>
+        </div>
+    </header>
+    <main>
+
+        <div id="main">
+            <div class="container">
+                <div class="banner">
+                    <div id="left">
+                        <div>
+                        <blockquote>"All our dreams can come true, if we have the courage to pursue them."</blockquote>
+                        </div>
+                        <div><blockquote id="quote2">"It's kind of fun to do the impossible."</blockquote></div>
+                        <div><blockquote id="quote3">"If you can dream it, you can do it."</blockquote></div>
+                        <div><blockquote id="quote4">"Disneyland will never be completed. It will continue to grow as long as there is
+                            imagination left in the world."</blockquote></div>
+                    </div>
+                    <div id="img-div">
+                        <figure>
+                            <img id="image" src="https://image.pbs.org/video-assets/pbs/american-experience/182151/images/mezzanine_424.jpg"
+                                alt="Walt Disney with sketch of Mickey Mouse and Minnie Mouse" title="Walt Disney with sketch of Mickey Mouse and Minnie Mouse">
+                            <figcaption id="img-caption">Walt Disney posing with a sketch of Mickey Mouse and Minnie
+                                Mouse</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="tribute-content" id="tribute-info">
+                        <p>Walt Disney was a man who loved to dream.  This year marks the 60th birthday of Mickey Mouse.  Mickey Mouse 
+                            is an icon that is known around the world.  But Mickey Mouse not Walt Disney's only accomplishment.  Walt Disney is
+                            the man who built the place where everyone can step into a world of dreams and relive their childhood.  No matter how 
+                            many times I have gone to Walt Disney World, I still love that feeling of walking down Mainstreet to Cinderella's castle.
+                        </p>
+                        <h2>Here's a time line of Walt Disney's life</h3>
+                        <ul>
+                         <li><b>1901</b> - Walt Disney was born in Chicago.</li>
+                         <li><b>1923</b> - Disney moved to Hollywood.</li>
+                         <li><b>1925</b> - Disney married Lillian Bounds, an ink artist.</li>
+                         <li><b>1926</b> - Oswald the Lucky Rabbit was created.</li>
+                         <li><b>1928</b> - Mickey Mouse first appeared as a single screening of the short Plane Crazy.  Then Mickey Mouse appeared in Steamboat Willie becoming the first post-produced sound cartoon.</li>
+                         <li><b>1933</b> - Daughter Diane was born.</li>
+                         <li><b>1934</b> - Disney began production of Snow White and the Seven Dwarfs.</li>
+                         <li><b>1936</b> - Daughter Sharon was adopted.</li>
+                         <li><b>1937</b> - Snow White and the Seven Dwarfs premiered in December 1937 and became the most sucessful sound film at the time.</li>
+                         <li><b>1950</b> - Cinderella was released.</li>
+                         <li><b>1955</b> - Sleeping Beauty was released.</li>
+                         <li><b>1955</b> - Disneyland opened in California</li>
+                         <li><b>1965</b> - Disney announced plans to open Disney World in Orlando, FL.</li>
+                         <li><b>1966</b> - He died from lung cancer on December 15, 1966 ten days after his 65th birthday.</li>
+                       </ul>
+                     
+                       <blockquote>
+                            <p>"I only hope that we never lose sight of one thing — that it all started with a mouse."</p> 
+                              <cite>- Walt Disney </cite>
+                        </blockquote>
+                        <p>To learn more about man behind it all go to <a href="https://en.wikipedia.org/wiki/Walt_Disney" target="_blank" id="tribute-link">Wikipedia</a></p>
+                </div>
+            </div>
+        </div>
+<br>
+    </main>
+
+    <footer>
+        Krissy Dukes &copy; 2018
+    </footer>
+
+
+
+</body>
+
+</html>

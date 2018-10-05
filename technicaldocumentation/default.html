@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Luckiest+Guy|Permanent+Marker"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <style>
+        :root {
+            --header-color: #0e1b5c;
+            --nav-color: #e0ebeb;
+            --highlight-color: #ffff66;
+
+        }
+
+        body {
+            margin: 0 0 0 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .wrapper {
+            display: flex;
+
+        }
+  
+        #navbar {
+            background-image: url('https://drive.google.com/uc?export=download&id=1hg10LsHQVxQH3Ae9jKZKalOfOc2op2K5');
+            background-size: cover;
+            background-color: var(--nav-color);
+            position: fixed;
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            box-shadow: 5px 5px 8px #888888;
+        }
+
+        #navbar header {
+            background-color: var(--header-color);
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            text-align: center;
+            font-family: 'Permanent Marker', cursive;
+            color: white;
+        }
+
+        #navbar a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            height: 100%;
+            width: 100%;
+        }
+
+        #navbar ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+        }
+
+        #navbar li {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 25px;
+            text-align: left;
+            font-family: 'Indie Flower', cursive;
+            font-size: 1.3em;
+            letter-spacing: 2px;
+        }
+
+        #navbar li:hover {
+
+            background-color: var(--highlight-color);
+            opacity: 0.8;
+            box-shadow: 0 0 10px var(--highlight-color);
+            font-size: 1.5em;
+        }
+
+        #main-doc {
+
+            margin-left: 310px;
+            padding: 25px 50px;
+            height: 150vh;
+
+        }
+        
+        #main-doc header {
+            font-size: 1.5em;
+            font-family: 'Permanent Marker', cursive;
+            border-bottom: 2px solid black;
+            background-color: #bcc6f5;
+            padding: 0 10px;
+        }
+
+        .fas, .far {
+            padding-right: 10px;
+        }
+
+        section {
+            padding-bottom: 45px;
+        }
+        .main-section {
+            width: 100%;
+        }
+        .main-section p {
+            line-height: 28px;
+        }
+        .main-section li {
+            padding-bottom: 10px;
+            line-height: 28px;
+        }
+        .section-table{
+            margin: 0 15px;
+            width: 95%;
+            border-collapse: collapse;
+            margin: 25px;
+            border: 2px solid black;
+            
+        }
+        .section-table thead {
+            background-color: var(--header-color);
+            color: white;
+            margin: 0;
+            border-bottom: 2px solid black;
+        }
+        .section-table th {
+
+            text-align: left;
+            
+        }
+        .section-table td, .section-table th {
+            padding: 5px 5px 5px 15px;
+        }
+
+        .section-table td:first-child {
+            font-weight: bold;
+            min-width: 125px;
+            
+        }
+        .section-table tr {
+            height: 50px;
+            border-bottom: 2px solid black;
+            
+        }
+        .section-table td {
+            vertical-align: top;
+        }
+        .section-table code {
+            padding: 0 0 15px 0;
+            display: block;
+            background-color: none;
+            white-space: pre;
+            word-break: normal;
+            word-wrap: normal;
+        }
+        .code-section {
+            margin: 0 15px;
+            width: 95%;
+        }
+
+        .code-header {
+            margin: 0;
+            padding: 0px 15px;
+            height: 40px;
+            line-height: 40px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            background-color: lightgray;
+            border: 2px solid black;
+        }
+
+        .code-block {
+            margin: 0;
+            padding: 0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+        .code-block code {
+            margin: 15px;
+            padding: 0;
+            display: block;
+            background-color: none;
+            white-space: pre-wrap;
+            word-break: normal;
+            word-wrap: normal;
+        }
+
+        
+        /* For Tablets */
+        @media all and (max-width: 1078px) {
+            #navbar {
+                min-width: 250px;
+                width: 270px;
+            }
+
+            #navbar header {
+                font-size: 1em;
+                height: 35px;
+                line-height: 35px;
+            }
+
+            #navbar li {
+                font-size: 1.1em;
+            }
+
+            #navbar li:hover {
+                font-size: 1.3em;
+            }
+
+            #main-doc {
+
+                margin-left: 275px;
+                padding: 15px;
+                height: auto;
+
+            }
+        }
+
+        /* For Smartphones */
+        @media all and (max-width: 800px) {
+            .wrapper {
+                flex-direction: column;
+
+            }
+
+            #navbar {
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                max-height: 300px;
+                border: none;
+                z-index: 1;
+                
+            }
+
+            #navbar header {
+                font-size: 1.3em;
+                height: 35px;
+                line-height: 35px;
+            }
+            #navbar ul {
+                overflow-y: auto;
+                max-height: 250px;
+            }
+            #navbar li {
+                font-size: 1.4em;
+            }
+
+            #navbar li:hover {
+                font-size: 1.3em;
+            }
+
+            #main-doc {
+                position: relative;
+                margin-left: 0px;
+                margin-top: 300px;
+            }
+            .section-table {
+                font-size: .5em;
+                word-wrap: break-word;
+            }
+            .section-table td:first-child {
+            font-weight: bold;
+            min-width: 50px;
+            
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="navbar">
+            <header>Kids Guide To JavaScript</header>
+            <ul>
+                <li><a href="#what_is_javascript" class="nav-link">What is JavaScript</a></li>
+                <li><a href="#get_started" class="nav-link">Get Started</a></li>
+                <li><a href="#comments" class="nav-link">Comments</a></li>
+                <li><a href="#data_types" class="nav-link">Data Types</a></li>
+                <li><a href="#variables" class="nav-link">Variables</a></li>
+                <li><a href="#math_&_operators" class="nav-link">Math & Operators</a></li>
+                <li><a href="#strings" class="nav-link">Strings</a></li>
+                <li><a href="#comparison_operators" class="nav-link">Comparison Operators</a></li>
+                <li><a href="#logical_operators" class="nav-link">Logical Operators</a></li>
+                <li><a href="#arrays" class="nav-link">Arrays</a></li>
+                <li><a href="#references" class="nav-link">References</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="what_is_javascript">
+                <header><span class="fas fa-question"></span>What is JavaScript</header>
+                <article>
+                    <p>What is JavaScript? A programming language.</p>
+
+                    <p>Computers are everywhere we look, without people telling computers what to do they are really dumb. </p>
+
+                    <p>How do people tell computers what to do? People give the computer a set of instructions by
+                        writing a computer program using a language that the computer understands: a programming
+                        language.</p>
+                    
+                    <p>JavaScript is a programming language that is used to program web pages. Web pages themselves contain many building blocks.</p>
+                         <ol>
+                             <li><strong>HTML</strong> contains the content of the page.</li>
+                             <li><strong>CSS</strong> is responsible for how a web page looks.</li> 
+                             <li><strong>JavaScript</strong> controls the behavior of a webpage.  JavaScript can also control how a web page looks and provide interactivity by responding to mouse clicks.</li>
+                         </ol>
+
+                </article>
+            </section>
+            <section class="main-section" id="get_started">
+                    <header><span class="fas fa-play-circle"></span>Get Started</header>
+                    <article>
+                        <p>The first thing you need is a place to write your code.  These are called code editors.  A code editor can be as simple as Notepad on a Windows computer or
+                            a complete development environment like Visual Studio.  For these examples I am going to show you an online code editor that only
+                            requires a web browser.
+                        </p>
+                        
+                        <ul>
+                            <li>Click on the link to go to <a href="http://jsbin.com/?html,js,console,output" target="_blank">jsbin.com</a></li>
+                            <li>There should be four areas displayed:  HTML, JavaScript, Console, Output.  HTML is where all the HTML code should be entered.
+                                JavaScript is where the JavaScript code will be entered.  Console is used when testing your code.  Output is what the webpage will look like.
+                                For exercises we will not be working with the HTML section for now.
+                            </li>
+                            <li>Next to the button <button>Run with JS</button> is a checkbox AutoRun JS.  Make sure that is unchecked.  Otherwise you might see some 
+                                errors while you are still typing your code.
+                            </li>
+                            <li>Enter the code below in the JavaScript section and click on <button>Run with JS</button></li>
+                            <li>Because we are using console.log in the code snippet below you will see the results in the Console section.  Console.log is a special
+                                function used by JavaScript to output messages to the console that will not be seen on the web page.  This is used for testing
+                                the code. 
+                            </li>
+                        </ul>
+                        <div class="code-section">
+                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                <div class="code-block">
+                                    <code>console.log("Hello World");</code>
+                                </div>
+                            </div>
+
+                    </article>
+                </section>
+                <section class="main-section" id="comments">
+                        <header><span class="far fa-comment-alt"></span>Comments</header>
+                        <article>
+                           <p>Comments are notes within the code made by the programmer.  Anything within the commented section 
+                               is ignored by the browser.  Programmers use comments to explain what sections of code are doing.  It makes 
+                               it easier for other programmers to read and follow what the code is supposed to be doing.  It also
+                               helps a programmer when they go back later to make changes to the code.  See below how to add a comment to your code.  
+                               Single line comments are good for adding a comment within the code.  Multiple line comments are good 
+                               for commenting out lines of code while testing.
+                           </p>
+                            <div class="code-section">
+                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                <div class="code-block">
+<code>// This is a single line comment 
+/* This is a 
+multiple line comment. */</code>
+                                </div>
+                            </div>
+                           
+                        </article>
+                    </section>
+                    <section class="main-section" id="data_types">
+                            <header><span class="fas fa-table"></span>Data Types</header>
+                            <article>
+                                <p>In computer programs, <strong>data</strong> is the information we store and manipulate in a program.  A <strong>data type</strong>
+                                a category that data belongs to.  There are three basic data types in JavaScript.  Copy & paste the code snippet below into the JavaScript panel 
+                                and run the code to see what happens.
+                                </p>
+                                <ul>
+                                    <li><strong>Numbers</strong> - represents numbers that are stored in the program like your age or weight.  Numbers can be used to 
+                                        perform calculations within the program.</li>
+                                    <li><strong>Strings</strong> - are letters or numbers that are put together to create string of characters such as your name or a sentence.
+                                    Strings are defined in JavaScript enclosed in quotes.  You can use double quotes (") or single quotes (') to define a string, but make sure the opening
+                                    quote marks match the closing quote marks. Strings can not be used to perform calculations in a program.
+                                    </li>
+                                    <li><strong>Booleans</strong> - represents a true or false value.</li>
+                                </ul>
+                                
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>console.log(10);
+console.log("This is a string");
+console.log('This is also a string');
+console.log(true);
+                                        </code>
+                                    </div>
+                                </div>
+                               
+                            </article>
+                        </section>
+                        <section class="main-section" id="variables">
+                                <header><span class="fas fa-save"></span>Variables</header>
+                                <article>
+                                    <h3>What are variables</h3>
+                                    <p>In a computer program, we assign values or data to a <strong>variable</strong>.    We assign
+                                    a name to the value so we can access it later in our program.  Variables are called variables because they can "vary" or change.  At any point in your program, you 
+                                    can change the value of a variable.  </p>
+                                    <h3>Defining Variables</h3>
+                                   <p>In JavaScript we create a new variable
+                                by using the keyword <strong>var</strong>. You have to be careful when naming your variables.  When you access
+                                your variable later on in your program, you have to make sure it is spelled correctly and the capitalization matches
+                                exactly.  The variable firstName is not the same as FirstName.  Also you can not use JavaScript keywords as a variable name.  The most common practice when naming
+                                a variable is to start your variable name with a lowercase letter.  If your variable contains multiple words in the name then 
+                            each word is capitalized except for the first word. This is called <em>camel case</em> because it looks like the humps of a camel.</p>
+                            <p>When we first define a variable is contains no value and is 
+                                    considered undefined.  We assign a value to a variable using an assignment operator.  In JavaScript the 
+                                    assignment operator is an equal sign (=).  You can assign a variable a value when you first create the variable
+                                    or later on in the code.  It is very important to remember, that you must define a variable before you can use it.  
+                                    </p>
+                            <p>
+                            </p>
+
+                            <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>
+// Define the variable firstName but the value is currently undefined
+var firstName; 
+console.log(firstName);
+
+// Assign a string value to the variable firstName
+firstName = "John";      
+console.log(firstName);
+
+// Define a variable named lastName and assigning a string value to it
+var lastName = "Smith";     
+
+// Define a variable named age and assigning a number value to it
+var age = 10;     
+
+// Define a variable named inSchool and assigning a boolean value to it
+var inSchool = true;     
+
+console.log(lastName);
+console.log(age);
+console.log(inSchool);
+
+// Change the value of age 
+age = 11;
+console.log(age);
+
+                                        </code>
+                                    </div>
+                                </div>
+
+                                </article>
+                            </section>
+                    <section class="main-section" id="math_&_operators">
+                            <header><span class="fas fa-calculator"></span>Math & Operators</header>
+                            <article>
+
+                                <p>JavaScript can perform mathematical operators like addition, subtraction, multiplication and division on numbers.  JavaScript
+                                    uses special symbols called operators to represent mathematical equations.  Copy & paste the code snippet below into the JavaScript panel 
+                                    and run the code to see what happens.
+                                </p>
+                                <ul>
+                                    <li>Addition:  + </li>
+                                    <li>Subtraction:  - </li>
+                                    <li>Multiplication:  * </li>
+                                    <li>Division:  /</li>
+                                    <li>Modulus: % - Returns the remainder from dividing two numbers.</li>
+                                </ul>
+
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>
+console.log(5 + 10);
+console.log(323 - 23);
+console.log(3323 * 32);
+console.log(10 / 2);
+console.log(9 % 2);   //Will return the remainder
+
+                                        </code>
+                                    </div>
+                                </div>
+                                <h3>Order of Operations</h3>
+                                <p>You can perform more complicated calculations in JavaScript as well.  JavaScript follows the same rules 
+                                    about <strong>order of operations</strong> as you follow in math.  Multiplication and division are always
+                                    done first and then addition and subtraction.  In JavaScript, like in math, you can put a parenthesis around
+                                    parts of an equation to force the computer to perform the operations first.  Copy & paste the code snippet below into the JavaScript panel 
+                                    and run the code to see what happens.
+                                </p>
+                                <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>console.log(322 + 32 * 15 - 10 / 4);
+console.log( (322 + 32) * (15 - 10) / 4 );
+                                            </code>
+                                        </div>
+                                    </div>
+                                    <h3>Using Variables</h3>
+                                    <p>You can perform mathematical calculations on variables and use the results to create a new variable.</p>
+                                    <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var birthYear = 2011;
+var currentYear = 2018;
+var age = currentYear - birthYear;
+console.log(age);
+                                                </code>
+                                            </div>
+                                        </div>
+                                        <h3>Incrementing and Decrementing</h3>
+                                        <p>A very common task you will need to do while building a program is to increase or decrease a variable by 1.  This is called <strong>incrementing</strong> (adding)
+                                        or <strong>decrementing</strong> (subtracting) a variable.  JavaScript has operators to make this task easier.
+                                        </p>
+                                        <ul>
+                                            <li>++</li>
+                                            <li>--</li>
+                                        </ul>
+                                        
+                                        <div class="code-section">
+                                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                <div class="code-block">
+                                                    <code>var counter = 0;
+counter++;      // same as counter = counter + 1;
+console.log(counter);
+counter--;      // same as counter = counter - 1;
+console.log(counter);
+                                                    </code>
+                                                </div>
+                                            </div>
+                                            <h3>Assignment Operators</h3>
+                                            <p>When we learned about variables, we discussed that that the equals sign (=) is an 
+                                                assignment operator.  There are other assignment operators in JavaScript that perform mathematical
+                                                calculations at the same as assigning a value to a variable.
+                                            </p>
+                                            <ul>
+                                                <li>+=</li>
+                                                <li>-=</li>
+                                                <li>*=</li>
+                                                <li>/=</li>
+                                            </ul>
+                                            <div class="code-section">
+                                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                    <div class="code-block">
+                                                        <code>var number = 20;
+x += 5;     // same as x = x + 5;
+x -= 5;     // same as x = x - 5;
+x *= 2;     // same as x = x * 2;
+x /= 2;     // same as x = x / 2;
+                                                        </code>
+                                                    </div>
+                                                </div>
+                                </article>
+                        </section>
+                        <section class="main-section" id="strings">
+                            <header><span class="fas fa-quote-left"></span>Strings</header>
+                            <article>
+                                <p>As mentioned earlier, strings are a collection of <strong>characters</strong> enclosed in quote marks in JavaScripts.  Characters include numbers,
+                                    letters, punctuation and spaces.  You can enclose a string inside single quotes or double quotes, but the beginning and ending quotes marks must match.  Please note:  If you
+                                    need to include quote marks inside a string, make sure to use double quotes for the starting and ending quotes and single quotes inside the string.
+                                </p>
+                                <div class="code-section">
+                                    <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                    <div class="code-block">
+                                        <code>var greeting = "Hello World!";
+var anotherGreeting = 'How are you doing?';
+var numberString = "10";
+var quote1 = "Somebody once said, 'When the going gets tough, the tough gets going'";
+console.log(greeting);
+console.log(anotherGreeting);
+console.log(numberString);
+console.log(quote1);</code>
+                                    </div>
+                                </div>
+                                <h3>Joining Strings</h3>
+                                <p>You can use the plus (+) operator on strings.  In the case of strings,
+                                    the plus (+) operator will concatenates or join two strings together.
+                                </p>
+                                <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>var greeting = "Hello World! ";
+var anotherGreeting = 'How are you doing?';
+var message = greeting + anotherGreeting;
+console.log(message);</code>
+                                        </div>
+                                    </div>
+                                    <h3>String Methods</h3>
+                                    <p>While creating a new string out of two strings can be fun, there are many other things you can do with
+                                        a string.  Strings have built in methods that can be very useful.
+                                    </p>
+                                    <ul>
+                                        <li><strong>Get a single character from a string</strong> - to get a certain character from 
+                                        a string we use square braces [] with the index or position of that character.  In JavaScript, the 
+                                        index starts counting from zero, so the first character in the string would have index = 0.  For example, stringName[1] 
+                                        will return the second character in the string.
+                                        </li>
+
+                                    </ul>
+                                    <table class="section-table">
+                                            <thead>
+                                                <tr>
+                                            <th>Method</td>
+                                            <th>Example</th>
+                                            <th>Description</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Length</td>
+                                                <td>stringName.length</td>
+                                                <td>Returns the number of characters in a string.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Slice</td>
+                                                <td>stringName.slice(1, 5)</td>
+                                                <td> If you need to cut out a part of a string you can use slice.
+                                                        The first number in the parentheses is the index of the starting character and the second number is the index of the character
+                                                        after the last character that is going to get cut out.</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>IndexOf</td>
+                                                    <td>stringName.indexOf("word")</td>
+                                                    <td>Returns the index of the first occurrence of the given string within the string. 
+                                                            Returns -1 if the string is not found.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>LastIndexOf</td>
+                                                        <td>stringName.lastIndexOf("word")</td>
+                                                        <td>Returns the index of the last occurrence of the given string within the string.
+                                                            Returns -1 if the string is not found.
+                                                        </td>
+                                                    </tr>
+                                            <tr>
+                                                <td>Uppercase</td>
+                                                <td>stringName.toUpperCase()</td>
+                                                <td>This method is used to convert all the characters in a 
+                                                        string to uppercase characters.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lowercase</td>
+                                                <td>stringName.toLowerCase()</td>
+                                                <td>This method is used to convert all the characters in a 
+                                                        string to lowercase characters.</td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var longString = "This is a very long string.  Do you know how many characters are in this string. This is the end.";
+console.log( longString.length );
+console.log( longString[0] );
+console.log( longString.slice(0, 4) );  // Should return characters at index 0 to index 3
+console.log( longString.indexOf("This") );
+console.log( longString.lastIndexOf("This") );
+console.log( longString.toUpperCase() );
+console.log( longString.toLowerCase() );
+                                                </code>
+                                            </div>
+                                        </div>
+                            </article>
+                        </section>
+                        <section class="main-section" id="comparison_operators">
+                                <header><span class="fas fa-equals"></span>Comparison Operators</header>
+                                <article>
+                                    <p>Comparison operators are used to test for either true or false.  <em>Please note:  The single equal sign (=) is an assignment
+                                        operator.  Do not use a single = sign when comparing if two values are equal.</em>
+                                    </p>
+                                    <table class="section-table">
+                                        <thead>
+                                            <tr>
+                                        <th>Operation</th> 
+                                        <th>Syntax</td>
+                                        <th><span class="fas fa-code"></span>Code</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Equal To</td>
+                                            <td>==</td>
+                                            <td><code>console.log(5 == 5);  // returns true
+console.log(5 == "5");  // returns true
+console.log(5 == 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr><td>Exactly Equal To</td>
+                                            <td>===</td>
+                                            <td><code>console.log(5 === 5);  // returns true
+console.log(5 === "5");  // returns false
+console.log(5 === 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Not Equal To</td>
+                                            <td>!=</td>
+                                            <td><code>console.log(5 != 5);  // returns false
+console.log(5 != "5");  // returns false
+console.log(5 != 6);    // returns true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Not Exactly Equal To</td>
+                                            <td>!==</td>
+                                            <td><code>console.log(5 != 5);  // returns true
+console.log(5 != "5");  // returns true
+console.log(5 != 6);    // returns false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Greater Than</td>
+                                            <td>&gt;</td>
+                                            <td>
+<code>
+console.log(5 &gt; 6);  // returns false
+console.log(5 &gt; 4);  // returns true
+console.log(5 &gt; 5);  // returns false</code>
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Less Than</td>
+                                            <td>&lt;</td>
+                                            <td>
+<code>
+console.log(5 &lt; 6);  // returns true
+console.log(5 &lt; 6);  // returns false
+console.log(5 &lt; 5);  // returns false
+        </code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Greater Than Or Equal To</td>
+                                            <td>&gt;=</td>
+                                            <td>
+<code>
+console.log(5 &gt;= 6);  // returns false
+console.log(5 &gt;= 4);  // returns true
+console.log(5 &gt;= 5);  // returns true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Less Than or Equal To</td>
+                                            <td>&lt;=</td>
+                                            <td>
+<code>
+console.log(5 &lt;= 6);  // returns true
+console.log(5 &lt;= 6);  // returns false
+console.log(5 &lt;= 5);  // returns true
+</code></td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                    <div class="code-section">
+                                        <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                        <div class="code-block">
+                                            <code>var numberFive = 5;
+
+console.log(numberFive == 5);
+console.log(numberFive != 6);
+console.log(numberFive &gt; 4);
+console.log(numberFive &gt;= 5);
+console.log(numberFive &lt; 6);
+console.log(numberFive &lt;= 5);
+                                                    
+console.log(numberFive === "5");
+console.log(numberFive !== "5");
+                                            </code>
+                                        </div>
+                                    </div>
+
+                                </article>
+                            </section>
+                            <section class="main-section" id="logical_operators">
+                                    <header><span class="fas fa-check"></span>Logical Operators</header>
+                                    <article>
+                                        <p>Logical operators are a comparison of between two boolean values.  There are three types
+                                            of logical operators in JavaScript:  &&, ||, and !.
+                                        </p>
+                                        <table class="section-table">
+                                                <thead>
+                                                    <tr>
+                                                <th>Operation</th> 
+                                                <th>Syntax</td>
+                                                <th>Description</th>
+                                                <th><span class="fas fa-code"></span>Code</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>And</td>
+                                                    <td>&&</td>
+                                                    <td>Used to compare if two boolean values are true.  Both values must be true to return a true value.  Otherwise the expression will</td>
+                                                    <td><code>console.log(true && true);  // returns true
+console.log(true && false);  // returns false
+console.log(false && false);  // returns false
+        </code></td>
+                                                </tr>
+                                                <tr><td>Or</td>
+                                                    <td>||</td>
+                                                    <td>Used to compare if one of two boolean values are true.  If one of the values are true then the expression returns true.</td>
+                                                    <td><code>console.log(true || true);  // returns true
+console.log(true || false);  // returns true
+console.log(false || false);    // returns false</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Not</td>
+                                                    <td>!</td>
+                                                    <td>Used to change the value of a boolean value.  It will change true to false and false to true.</td>
+                                                    <td><code>console.log(!true);  // returns false
+console.log(!false);  // returns true
+</code></td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                            </table>
+                                        <div class="code-section">
+                                            <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                            <div class="code-block">
+                                                <code>var isBlue = true;
+var isRed = false;
+console.log(isBlue && isRed);
+console.log(isBlue || isRed);
+console.log(!isBlue);
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                    </article>
+                                </section>
+                                <section class="main-section" id="arrays">
+                                        <header><span class="fas fa-table"></span>Arrays</header>
+                                        <article>
+                                            <p>Arrays are used to store multiple 
+                                                values under a single variable name.  Arrays are defined by listing the values of the array between square braces [].
+                                                You can access the value inside the array by referencing the index number of the value. 
+                                            </p>
+                                            <div class="code-section">
+                                                <div class="code-header"><span class="fas fa-code"></span>Code</div>
+                                                <div class="code-block">
+                                                    <code>var ingredients = ["milk", "eggs", "flour", "sugar"];
+var ages = [9, 10, 7, 18, 25];
+var misc = ["red", 10, true];
+console.log(ingredients);
+console.log(ingredients[0]);
+console.log(ages);
+console.log(misc);
+
+                                                    </code>
+                                                </div>
+                                            </div>
+                                            <h3>Array Methods</h3>
+
+                                        </article>
+                                    </section>
+            <section class="main-section" id="references">
+                <header><span class="fas fa-book-open"></span>References</header>
+                <article>
+                    <p>
+                        <cite>JavaScript for Kids</cite> by Nick Morgan
+                    </p>
+                    <p><cite>w3Schools</cite></p>
+                </article>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+
+</html>

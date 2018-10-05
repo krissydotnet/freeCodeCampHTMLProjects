@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Arimo" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #0f2df2;
+            --form-color: white;
+            --secondary-color: #232e80;
+        }
+        body {
+            font-family: Arimo, Verdana, Geneva, Tahoma, sans-serif;
+            background-color:var(--background-color);
+        }
+        .survey-field li {
+            list-style: none;
+        }
+        .survey-wrapper {
+            margin: auto;
+            padding: 5px 25px;
+            max-width: 800px;
+            background-color: var(--form-color);
+        }
+        .form-fields-wrapper {
+            margin: 25px;
+        }
+        .survey-wrapper h1 {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+        .survey-wrapper p {
+            text-align: center;
+        }
+        .survey-row {
+            display: flex;
+            padding: 25px 0 0 25px;
+        }
+        .survey-label {
+            width: 40%;
+            text-align: right;
+            line-height: 30px;
+            color: var(--secondary-color);
+        }
+        .survey-field {
+            width: 60%;
+            padding-left: 15px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+        }
+        input[type='text'], input[type='email'], input[type='number'], textarea {
+            width: 300px;
+        }
+        input, select {
+            height: 30px;
+
+        }
+        select {
+            width: 200px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-top: -1px;
+            vertical-align: middle;
+        }
+
+
+        .button-wrapper {
+            margin: auto;
+            width: 100%;
+        }
+
+        button {
+            border: none;
+            width:100%;
+            height: 45px;
+            font-size: 28px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        button:hover {
+            background-color: var(--background-color);
+            transform: scale(1.01);
+        }
+        button:focus {
+            transform: scale(0.99);
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 15px;
+            }
+            .survey-wrapper h1 {
+                font-size: 32px;
+            }
+            #submit {
+                font-size: 20px;
+                height: 35px;
+                border: none;
+            }
+            ul {
+            padding: 0;
+            list-style-type: none;
+            }
+            input[type='text'], input[type='email'], input[type='number'], textarea {
+             width: 100%;
+            }
+            .survey-row {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .survey-label {
+                display: flex;
+                width: 100%;
+                text-align: left;
+            }
+            .survey-field {
+                display: flex;
+                width: 100%;
+                padding: 10px 0px;
+            }
+
+            .form-fields-wrapper {
+                margin: 0;
+                padding: 2px;
+            }
+            .survey-row {
+                margin: 0;
+                padding: 0;
+            }
+            .survey-field {
+            padding-left: 0px;
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="survey-wrapper">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">
+                A quick survey on what foods you like to eat and what you call them.
+            </p>
+            <div class="form-fields-wrapper">
+                <form action="" id="survey-form">
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="name" id="name-label">* Name:</label>
+                        </div>
+                        <div class="survey-field">
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required="true">
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="email" id="email-label">* Email Address:</label>
+                        </div>
+                        <div class="survey-field">
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" required="true">
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="age" id="number-label">* Age:</label>
+                        </div>
+                        <div class="survey-field">
+                            <input type="number" name="age" id="number" min="0" max="100" placeholder="Enter your age"
+                                required="true">
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="mealtime" id="dropdown-label">What is your favorite meal?</label>
+                        </div>
+                        <div class="survey-field">
+                            <select name="mealtime" id="dropdown">
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="supper">Supper</option>
+                                <option value="evening snack">Evening Snack</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="meals" id="items-label">What do you call your evening meal:</label>
+                        </div>
+                        <div class="survey-field">
+                            <ul>
+                                <li> <label for="one" class="radio-label">
+                                        <input id="one" type="radio" name="meals" value="supper">
+                                        Supper
+                                    </label>
+                                </li>
+                                <li> <label for="two" class="radio-label">
+                                        <input id="two" type="radio" name="meals" value="dinner">
+                                        Dinner
+                                    </label>
+                                </li>
+                                <li> <label for="three" class="radio-label">
+                                        <input id="three" type="radio" name="meals" value="none">
+                                        None of the above
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="snacks" id="items-label">Choose one of these snacks:</label>
+                        </div>
+                        <div class="survey-field">
+                            <ul>
+                                <li> <label for="one" class="radio-label">
+                                        <input id="one" type="radio" name="snacks" value="potato chips">
+                                        Potato Chips
+                                    </label>
+                                </li>
+                                <li> <label for="two" class="radio-label">
+                                        <input id="two" type="radio" name="snacks" value="popcorn">
+                                        Popcorn
+                                    </label>
+                                </li>
+                                <li> <label for="three" class="radio-label">
+                                        <input id="three" type="radio" name="snacks" value="crackers">
+                                        Crackers
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="breakfast" id="otheritems-label">Choose one of these breakfast meals:</label>
+                        </div>
+                        <div class="survey-field">
+                            <ul>
+                                <li> <label for="one">
+                                        <input id="one" type="radio" name="breakfast" value="pancakes">
+                                        Pancakes
+                                    </label>
+                                </li>
+                                <li> <label for="two">
+                                        <input id="two" type="radio" name="breakfast" value="waffles">
+                                        Waffles
+                                    </label>
+                                </li>
+                                <li> <label for="three">
+                                        <input id="three" type="radio" name="breakfast" value="french toast">
+                                        French Toast
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="foods" id="checkitems-label">Check all the foods you like:</label>
+                        </div>
+                        <div class="survey-field">
+                            <ul>
+                                <li> <label for="one">
+                                        <input id="one" type="checkbox" name="foods" value="pizza">
+                                        Pizza
+                                    </label>
+                                </li>
+                                <li> <label for="two">
+                                        <input id="two" type="checkbox" name="foods" value="donuts">
+                                        Donuts
+                                    </label>
+                                </li>
+                                <li> <label for="three">
+                                        <input id="three" type="checkbox" name="foods" value="ice cream">
+                                        Ice Cream
+                                    </label>
+                                </li>
+                                <li> <label for="four">
+                                        <input id="four" type="checkbox" name="foods" value="chocolate">
+                                        Chocolate
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="survey-label">
+                            <label for="checkitems" id="checkitems-label">Comments:</label>
+                        </div>
+                        <div class="survey-field">
+                            <textarea id="comments" name="comments"></textarea>
+                        </div>
+                    </div>
+                    <div class="survey-row">
+                        <div class="button-wrapper">
+                            <button type="submit" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

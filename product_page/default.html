@@ -1,0 +1,1094 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Delius" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00a3cc;
+            --background-color: #b3f0ff;
+        }
+         body {
+             margin: 0;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             background-color: var(--background-color);
+            }
+        a {
+                text-decoration: none;
+            }
+        .page-wrapper {
+            margin: 0;
+
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #menu-bars {
+            float: right;
+            display:none;
+            font-size: 40px;
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+        footer {
+
+            width: 100%;
+        }
+        main {
+            
+         /*   grid-area: main-content;
+            min-height: 300px; */
+            background-color: var(--background-color);
+            
+
+        }
+        .parallax { 
+            /* The image used */
+            background-image: url('https://drive.google.com/uc?export=download&id=1TPYpPW11GB0ZHrztly3KYqqa_AhlN4wE');
+
+            /* Set a specific height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+}
+        .container {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        .header-wrapper {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            background-color: var(--background-color );
+            flex-direction: row;
+
+        }
+
+        .header-left {
+            order: 1;
+            flex-basis: 30%;
+        }
+        .header-left img {
+            margin: 0;
+            height: 100%;
+        }
+        .header-right {
+            order: 2;
+            font-size: 1.1em;
+            flex-basis: 70%;
+            
+           
+        }
+        #nav-bar {
+           float: right;
+        }
+        #nav-bar ul {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #nav-bar li {
+            list-style: none;
+            line-height: 80px;
+            float: left;
+            padding: 0px 25px;
+            background-color:#b3f0ff;
+        }
+        .nav-link {
+            height: 80px;
+            text-decoration: none;
+            color: black;
+        }
+        #nav-bar li:hover {
+            background-color: var(--secondary-color);
+
+        }
+        .nav-link:hover {
+            color: white;
+        }
+        .products-wrapper {
+            margin: 10px auto;
+            width: 100%;
+
+            
+        }
+        .banner {
+            position: relative;
+            margin-top: 0;
+            /*background-image: url('images/pexels-photo-1011334.jpeg');
+            background-size: cover;
+            */
+            width: 100%;
+            height: 125px;
+        }
+        .anchor {
+            position: absolute;
+            top: -60px;
+        }
+        .banner h1 {
+            margin-top: 80px;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: var(--primary-color);
+            font-family: 'Anton', sans-serif;
+            font-size: 40px;
+            line-height: 125px;
+            letter-spacing: 0.5em;
+        }
+        .product-info {
+            
+            background-color:  #e0ebeb;
+            font-family: 'Delius', cursive;
+            width: 90%;
+            margin: 0 auto;
+            border: 2px solid #e0ebeb;
+            border-radius: 25px;
+            padding: 15px 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 'name name name'
+                                 'picture desc price'
+                                 'picture desc price'
+                                 'picture video price';
+        }
+        .product-name {
+            grid-area: name;
+       
+        }
+        .product-info h2 {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 25px;
+            color: var(--primary-color);
+        }
+        .product-info img{
+            width: 80%;
+            margin-left: 20px;
+        }
+
+
+        .product-picture {
+            grid-area: picture;
+            margin: 0px;
+    
+        }
+        .product-features {
+            grid-area: desc;
+        }
+        .product-video {
+            grid-area: video;
+        }
+        #video {
+            width: 320px;
+        }
+        .product-price {
+            grid-area: price;
+            justify-self: end;
+        }
+        .info-wrapper, .contact-wrapper {
+            margin: 50px auto;
+            width: 100%;
+            
+        }
+        .content-wrapper {
+            display: flex;
+            width: 90%;
+            margin: 10px 25px;
+            flex-direction: row;
+            background-color:  #e0ebeb;
+            border: 2px solid #e0ebeb;
+            border-radius: 25px;
+            padding: 25px;
+        }
+        .info-photo {
+            order: 1;
+        }
+        .information {
+            order: 2;
+            padding: 25px;
+        }
+        .information p {
+            line-height: 1.6em;
+        }
+        .form-wrapper {
+            width: 100%;
+        }
+        .form-row {
+            display: flex;
+            width: 100%;
+            padding-top: 25px;
+            
+        }
+
+        .contact-btn {
+            margin: auto;
+            width: 250px;
+            height: 75px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 30px;
+            font-family: 'Delius', cursive;
+            text-align: center;
+            line-height: 75px;
+            border-style: none;
+            border-radius: 25px;
+        }
+        .contact-btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+           
+        }
+        .contact-btn:active {
+            transform: scale(1.1);
+        }
+        
+        .form-label {
+            order: 1;
+            flex-basis: 20%;
+        }
+        .form-field {
+            order: 2;
+            flex-basis: 60%;
+        }
+        .form-field input, .form-field textarea {
+            width: 80%;
+        }
+        .form-field input {
+            height: 30px;
+        }
+        .form-field textarea {
+            height: 100px;
+        }
+        .footer-wrapper {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            background-color: var(--background-color);
+            flex-direction: row;
+
+        }
+
+        .footer-left {
+            order: 1;
+            flex-basis: 30%;
+            line-height: 70px;
+            margin-left: 25px;
+        }
+
+        .footer-right {
+            order: 2;
+            font-size: 0.8em;
+            flex-basis: 70%;
+        }
+        #footer-nav-bar {
+           float: right;
+        }
+        #footer-bar ul {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #footer-nav-bar li {
+            list-style: none;
+            float: left;
+            padding: 0px 25px;
+            background-color:#b3f0ff;
+        }
+        
+        @media (max-width: 1024px) {
+
+            .product-info {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 'name name'
+                                    'picture desc '
+                                    'picture price '
+                                    'picture video ';
+                grid-row-gap: 25px;
+            }
+            .product-price {
+                justify-self: stretch;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            #menu-bars {
+                display: inline;
+            }
+            #nav-bar {
+                display: none;
+            }    
+            .banner h1 {
+
+            font-size: 20px;
+
+        }
+            .product-info {
+
+                grid-template-columns: 1fr;
+                grid-template-areas: 'name'
+                                    'picture '
+                                    'desc '
+                                    'price '
+                                    'video ';
+                max-width: 525px;
+                width: 90%;
+            }  
+
+            .content-wrapper {
+
+            flex-direction: column;
+            max-width: 525px;
+            width: 90%;
+           
+        }
+            .form-row {
+            flex-direction: column;
+            
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="header-wrapper">
+            <div class="header-left">
+                
+                <div class="logo">
+                <img src="https://drive.google.com/uc?export=download&id=1aVbJm0SNZPoxK43cly-siU1Jp-ml2nEr" id="header-img" alt="Logo">
+                </div>
+            </div>
+            <div class="header-right">
+                <nav id="nav-bar">
+                    <Ul>
+                        <a href="#products" class="nav-link">
+                            <li>Products</li>
+                        </a>
+                        <a href="#info" class="nav-link">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#contact" class="nav-link">
+                            <li>Contact</li>
+                        </a>
+                    </Ul>
+                </nav>
+                <div class="fas fa-bars" id="menu-bars"></div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="parallax">
+            <div class="container">
+                <div class="products-wrapper">
+                    <div class="banner">
+                        <a id="products" class="anchor"></a>
+                        <h1>Products</h1>
+
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <h2>Fluffy Necklace</h2>
+                        </div>
+                        <div class="product-picture">
+                            <img src="https://drive.google.com/uc?export=download&id=1rGz4X1MHkwgA6MQOTbiYXqNUzb7ngULn" alt="Fluffy Necklace">
+                        </div>
+                        <div class="product-features">
+                            <h3>Product Features</h3>
+                            <ul>
+                                <li>Handmade in America</li>
+                                <li>Soft & Fluffy</li>
+                                <li>Safe to sleep with</li>
+                            </ul>
+                        </div>
+                        <div class="product-video">
+                            <h3>Learn More</h3>
+                           
+                            <video id="video" controls autoplay>
+                                <source src="https://drive.google.com/uc?export=download&id=1GHn6T_TYoZZr7ut838tMgRyalshTmCFm" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            
+                        </div>
+                        <div class="product-price">
+                            <h3>Price</h3>
+                            <p>$4.99</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-wrapper">
+                    <div class="banner">
+                        <a id="info" class="anchor"></a>
+                        <h1>About Us</h1>
+
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="info-photo">
+                            <img src="https://via.placeholder.com/200x200" alt="">
+                        </div>
+                        <div class="information">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nisi sunt nobis
+                                voluptatibus vitae odio sit atque quam similique praesentium cum, est, quae,
+                                cupiditate harum quasi! Quae rem laboriosam inventore.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, modi at iusto
+                                ratione, aperiam voluptate ipsum molestiae excepturi culpa, architecto amet
+                                doloremque pariatur. Hic ut itaque repellat dolorem facilis dolore?</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contact-wrapper">
+                    <div class="banner">
+                        <a id="contact" class="anchor"></a>
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="form-wrapper">
+                            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                                <p>Contact us about our products and to receive updates about future products.</p>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="contact-name">* Name:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="text" name="contact-name" id="contact-name" placeholder="Enter first name" required="true">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="email">* Email:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="email" name="email" id="email" placeholder="Enter email address" required="true">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="comments">Comments:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <textarea id="comments" name="comments"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <input type="submit" id="submit" class="contact-btn" value="Submit">
+
+
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                Copyright &copy; 2018 - Dukes Designs
+            </div>
+            <div class="footer-right">
+                <nav id="footer-nav-bar">
+                    <Ul>
+                        <a href="" class="nav-link">
+                            <li>Privacy</li>
+                        </a>
+                        <a href="" class="nav-link">
+                            <li>Terms</li>
+                        </a>
+                        <a href="#contact" class="nav-link">
+                            <li>Contact</li>
+                        </a>
+                    </Ul>
+                </nav>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Delius" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #00a3cc;
+            --background-color: #b3f0ff;
+        }
+         body {
+             margin: 0;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             background-color: var(--background-color);
+            }
+        a {
+                text-decoration: none;
+            }
+        .page-wrapper {
+            margin: 0;
+
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        #menu-bars {
+            float: right;
+            display:none;
+            font-size: 40px;
+            padding-top: 10px;
+            padding-right: 10px;
+        }
+        footer {
+
+            width: 100%;
+        }
+        main {
+            
+         /*   grid-area: main-content;
+            min-height: 300px; */
+            background-color: var(--background-color);
+            
+
+        }
+        .parallax { 
+            /* The image used */
+            background-image: url('images/pexels-photo-1011334.jpeg');
+
+            /* Set a specific height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+}
+        .container {
+            max-width: 1024px;
+            margin: auto;
+        }
+
+        .header-wrapper {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            background-color: var(--background-color );
+            flex-direction: row;
+
+        }
+
+        .header-left {
+            order: 1;
+            flex-basis: 30%;
+        }
+        .header-left img {
+            margin: 0;
+            height: 100%;
+        }
+        .header-right {
+            order: 2;
+            font-size: 1.1em;
+            flex-basis: 70%;
+            
+           
+        }
+        #nav-bar {
+           float: right;
+        }
+        #nav-bar ul {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #nav-bar li {
+            list-style: none;
+            line-height: 80px;
+            float: left;
+            padding: 0px 25px;
+            background-color:#b3f0ff;
+        }
+        .nav-link {
+            height: 80px;
+            text-decoration: none;
+            color: black;
+        }
+        #nav-bar li:hover {
+            background-color: var(--secondary-color);
+
+        }
+        .nav-link:hover {
+            color: white;
+        }
+        .products-wrapper {
+            margin: 10px auto;
+            width: 100%;
+
+            
+        }
+        .banner {
+            position: relative;
+            margin-top: 0;
+            /*background-image: url('images/pexels-photo-1011334.jpeg');
+            background-size: cover;
+            */
+            width: 100%;
+            height: 125px;
+        }
+        .anchor {
+            position: absolute;
+            top: -60px;
+        }
+        .banner h1 {
+            margin-top: 80px;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: var(--primary-color);
+            font-family: 'Anton', sans-serif;
+            font-size: 40px;
+            line-height: 125px;
+            letter-spacing: 0.5em;
+        }
+        .product-info {
+            
+            background-color:  #e0ebeb;
+            font-family: 'Delius', cursive;
+            width: 90%;
+            margin: 0 auto;
+            border: 2px solid #e0ebeb;
+            border-radius: 25px;
+            padding: 15px 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 'name name name'
+                                 'picture desc price'
+                                 'picture desc price'
+                                 'picture video price';
+        }
+        .product-name {
+            grid-area: name;
+       
+        }
+        .product-info h2 {
+            font-size: 30px;
+            color: var(--primary-color);
+        }
+        .product-info h3 {
+            margin: 0;
+            font-size: 25px;
+            color: var(--primary-color);
+        }
+        .product-info img{
+            width: 80%;
+            margin-left: 20px;
+        }
+
+
+        .product-picture {
+            grid-area: picture;
+            margin: 0px;
+    
+        }
+        .product-features {
+            grid-area: desc;
+        }
+        .product-video {
+            grid-area: video;
+        }
+        #video {
+            width: 320px;
+        }
+        .product-price {
+            grid-area: price;
+            justify-self: end;
+        }
+        .info-wrapper, .contact-wrapper {
+            margin: 50px auto;
+            width: 100%;
+            
+        }
+        .content-wrapper {
+            display: flex;
+            width: 90%;
+            margin: 10px 25px;
+            flex-direction: row;
+            background-color:  #e0ebeb;
+            border: 2px solid #e0ebeb;
+            border-radius: 25px;
+            padding: 25px;
+        }
+        .info-photo {
+            order: 1;
+        }
+        .information {
+            order: 2;
+            padding: 25px;
+        }
+        .information p {
+            line-height: 1.6em;
+        }
+        .form-wrapper {
+            width: 100%;
+        }
+        .form-row {
+            display: flex;
+            width: 100%;
+            padding-top: 25px;
+            
+        }
+
+        .contact-btn {
+            margin: auto;
+            width: 250px;
+            height: 75px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 30px;
+            font-family: 'Delius', cursive;
+            text-align: center;
+            line-height: 75px;
+            border-style: none;
+            border-radius: 25px;
+        }
+        .contact-btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+           
+        }
+        .contact-btn:active {
+            transform: scale(1.1);
+        }
+        
+        .form-label {
+            order: 1;
+            flex-basis: 20%;
+        }
+        .form-field {
+            order: 2;
+            flex-basis: 60%;
+        }
+        .form-field input, .form-field textarea {
+            width: 80%;
+        }
+        .form-field input {
+            height: 30px;
+        }
+        .form-field textarea {
+            height: 100px;
+        }
+        .footer-wrapper {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            background-color: var(--background-color);
+            flex-direction: row;
+
+        }
+
+        .footer-left {
+            order: 1;
+            flex-basis: 30%;
+            line-height: 70px;
+            margin-left: 25px;
+        }
+
+        .footer-right {
+            order: 2;
+            font-size: 0.8em;
+            flex-basis: 70%;
+        }
+        #footer-nav-bar {
+           float: right;
+        }
+        #footer-bar ul {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #footer-nav-bar li {
+            list-style: none;
+            float: left;
+            padding: 0px 25px;
+            background-color:#b3f0ff;
+        }
+        
+        @media (max-width: 1024px) {
+
+            .product-info {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 'name name'
+                                    'picture desc '
+                                    'picture price '
+                                    'picture video ';
+                grid-row-gap: 25px;
+            }
+            .product-price {
+                justify-self: stretch;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            #menu-bars {
+                display: inline;
+            }
+            #nav-bar {
+                display: none;
+            }    
+            .banner h1 {
+
+            font-size: 20px;
+
+        }
+            .product-info {
+
+                grid-template-columns: 1fr;
+                grid-template-areas: 'name'
+                                    'picture '
+                                    'desc '
+                                    'price '
+                                    'video ';
+                max-width: 525px;
+                width: 90%;
+            }  
+
+            .content-wrapper {
+
+            flex-direction: column;
+            max-width: 525px;
+            width: 90%;
+           
+        }
+            .form-row {
+            flex-direction: column;
+            
+            }
+
+        }
+}
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div class="header-wrapper">
+            <div class="header-left">
+                
+                <div class="logo">
+                <img src="images/product_page_logo.png" id="header-img" alt="Logo">
+                </div>
+            </div>
+            <div class="header-right">
+                <nav id="nav-bar">
+                    <Ul>
+                        <a href="#products" class="nav-link">
+                            <li>Products</li>
+                        </a>
+                        <a href="#info" class="nav-link">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#contact" class="nav-link">
+                            <li>Contact</li>
+                        </a>
+                    </Ul>
+                </nav>
+                <div class="fas fa-bars" id="menu-bars"></div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="parallax">
+            <div class="container">
+                <div class="products-wrapper">
+                    <div class="banner">
+                        <a id="products" class="anchor"></a>
+                        <h1>Products</h1>
+
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <h2>Fluffy Necklace</h2>
+                        </div>
+                        <div class="product-picture">
+                            <img src="images/fluff_necklace.jpg" alt="Fluffy Necklace">
+                        </div>
+                        <div class="product-features">
+                            <h3>Product Features</h3>
+                            <ul>
+                                <li>Handmade in America</li>
+                                <li>Soft & Fluffy</li>
+                                <li>Safe to sleep with</li>
+                            </ul>
+                        </div>
+                        <div class="product-video">
+                            <h3>Learn More</h3>
+                            <video id="video" controls autoplay>
+                                <source src="images/fluffynecklace-commercial.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="product-price">
+                            <h3>Price</h3>
+                            <p>$4.99</p>
+                            <button>Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-wrapper">
+                    <div class="banner">
+                        <a id="info" class="anchor"></a>
+                        <h1>About Us</h1>
+
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="info-photo">
+                            <img src="https://via.placeholder.com/200x200" alt="">
+                        </div>
+                        <div class="information">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nisi sunt nobis
+                                voluptatibus vitae odio sit atque quam similique praesentium cum, est, quae,
+                                cupiditate harum quasi! Quae rem laboriosam inventore.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, modi at iusto
+                                ratione, aperiam voluptate ipsum molestiae excepturi culpa, architecto amet
+                                doloremque pariatur. Hic ut itaque repellat dolorem facilis dolore?</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contact-wrapper">
+                    <div class="banner">
+                        <a id="contact" class="anchor"></a>
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="form-wrapper">
+                            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                                <p>Contact us about our products and to receive updates about future products.</p>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="contact-name">* Name:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="text" name="contact-name" id="contact-name" placeholder="Enter first name" required="true">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="email">* Email:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <input type="email" name="email" id="email" placeholder="Enter email address" required="true">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-label">
+                                        <label for="comments">Comments:</label>
+                                    </div>
+                                    <div class="form-field">
+                                        <textarea id="comments" name="comments"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <input type="submit" id="submit" class="contact-btn" value="Submit">
+
+
+                                </div>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="footer">
+
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                Copyright &copy; 2018 - Dukes Designs
+            </div>
+            <div class="footer-right">
+                <nav id="footer-nav-bar">
+                    <Ul>
+                        <a href="" class="nav-link">
+                            <li>Privacy</li>
+                        </a>
+                        <a href="" class="nav-link">
+                            <li>Terms</li>
+                        </a>
+                        <a href="#contact" class="nav-link">
+                            <li>Contact</li>
+                        </a>
+                    </Ul>
+                </nav>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+>>>>>>> 1b06f28206bd72c47d2e181cdd14f6637c605485
+</html>
